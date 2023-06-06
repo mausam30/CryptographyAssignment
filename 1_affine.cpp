@@ -60,7 +60,7 @@ int main() {
     std::cin >> a;
     std::cout << "Enter the additive value: ";
     std::cin >> b;
-    std::cin.ignore(); // Ignore the newline character after reading 'b'.
+    std::cin.ignore(); 
 
     std::string encrypted_text = affine_encrypt(plain_text, a, b);
     std::cout << "Encrypted text: " << encrypted_text << std::endl;
