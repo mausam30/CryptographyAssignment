@@ -7,7 +7,7 @@
 #include <cctype>
 #include <unordered_map>
 
-// Function to generate a random salt
+
 std::string generate_salt(std::size_t length = 8) {
     std::string salt_characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
     std::random_device rd;
@@ -17,7 +17,7 @@ std::string generate_salt(std::size_t length = 8) {
     return salt_characters;
 }
 
-// Function to hash a password with salt
+
 std::string hash_password(const std::string& password, const std::string& salt) {
     std::string salted_password = password + salt;
     std::hash<std::string> hash_fn;
@@ -25,7 +25,7 @@ std::string hash_password(const std::string& password, const std::string& salt) 
     return std::to_string(hashed_password);
 }
 
-// Function to check if a password matches the hashed password
+
 bool check_password(const std::string& password, const std::string& hashed_password, const std::string& salt) {
     std::string salted_password = password + salt;
     std::hash<std::string> hash_fn;
